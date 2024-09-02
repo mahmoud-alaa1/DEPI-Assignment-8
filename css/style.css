@@ -58,6 +58,8 @@ button:active {
 }
 section {
   min-height: 50vh;
+    padding: 0 1.5rem;
+
 }
 .my-card {
   /* From https://css.glass */
@@ -93,6 +95,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+    padding: 0 1.5rem;
 }
 .slider {
   height: 50vh;
