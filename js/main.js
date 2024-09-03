@@ -29,9 +29,8 @@ function setImage(i) {
   idx = i;
 }
 
-function changeIdx(inc){
+function changeIdx(inc) {
   idx = (idx + inc + imgsNumber) % imgsNumber;
-  console.log(idx)
   setImage(idx);
 }
 
@@ -43,12 +42,17 @@ galleryContainer.addEventListener("click", (e) => {
 });
 
 caruosel.addEventListener("click", (e) => {
-  console.log(e.target);
   if (e.target.tagName === "DIV" || e.target.classList.contains("close"))
     toggleCaruosel();
   else if (e.target.classList.contains("left")) {
     changeIdx(1);
   } else if (e.target.classList.contains("right")) {
     changeIdx(-1);
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    caruosel.style.display = "none";
   }
 });
